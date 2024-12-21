@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { signIn, useSession } from "next-auth/react";
 
 export default function LoginPage() {
   return (
@@ -33,7 +36,12 @@ export default function LoginPage() {
         <CardFooter className="flex justify-between">
           <Button variant="outline">新規登録</Button>
           <Link href="/dashboard">
-            <Button>ログイン</Button>
+            <Button
+              className=""
+              onClick={() => signIn("google", {}, { prompt: "login" })}
+            >
+              Googleでログイン
+            </Button>
           </Link>
         </CardFooter>
       </Card>
