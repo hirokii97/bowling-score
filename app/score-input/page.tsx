@@ -82,7 +82,7 @@ export default function ScoreInputPage() {
           </form>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Link href="/dashboard">
+          <Link href="/">
             <Button variant="outline">キャンセル</Button>
           </Link>
           <Button type="submit" onClick={handleSubmit}>
