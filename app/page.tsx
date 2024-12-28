@@ -1,10 +1,11 @@
 "use client";
 
-import Dashboard from "@/components/dashboard";
-import { Login } from "@/components/login";
 import { useSession } from "next-auth/react";
+import Dashboard from "./dashboard/page";
+import { Login } from "./login/page";
+import { Data } from "@/types/data";
 
-const data: any = [
+const data: Data[] = [
   { game: 1, score: 150 },
   { game: 2, score: 180 },
   { game: 3, score: 165 },
@@ -14,5 +15,9 @@ const data: any = [
 
 export default function Home() {
   const { status } = useSession();
-  return <div>{status === "authenticated" ? <Dashboard data={data} /> : <Login />}</div>;
+  return (
+    <div>
+      {status !== "authenticated" ? <Dashboard data={data} /> : <Login />}
+    </div>
+  );
 }

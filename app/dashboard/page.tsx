@@ -17,8 +17,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { Data } from "@/types/data";
 
-export default function Dashboard(props: { data: number[]; }) {
+export default function Dashboard(props: { data: Data[]; }) {
   const { data } = props;
   return (
     <div className="container mx-auto p-4">
