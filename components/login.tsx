@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/button";
 import { Input } from "@/components/input";
 import {
@@ -11,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/card";
-import { signIn, useSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
 
 export const Login = () => {
   return (
