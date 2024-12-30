@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Button } from "@/components/button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/card";
+} from "@/components/ui/card";
 import {
   LineChart,
   Line,
@@ -18,14 +18,13 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { Data } from "@/types/data";
-
-export default function Dashboard(props: { data: Data[]; }) {
+import Header from "@/components/layout/header";
+ 
+export const Dashboard = (props: { data: Data[] }) => {
   const { data } = props;
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">
-        ボウリングスコアダッシュボード
-      </h1>
+        <Header/>
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <CardHeader>
