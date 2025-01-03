@@ -1,7 +1,7 @@
 "use client";
 
 import { useSession } from "next-auth/react";
-import Dashboard from "./dashboard/page";
+import { Dashboard } from "./dashboard/page";
 import { Login } from "./login/page";
 import { Data } from "@/types/data";
 
