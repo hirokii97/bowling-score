@@ -17,7 +17,7 @@ export default function Home() {
   const { status } = useSession();
   return (
     <div>
-      {status !== "authenticated" ? <Dashboard data={data} /> : <Login />}
+      {status === "authenticated" ? <Dashboard data={data} /> : <Login />}
     </div>
   );
 }
