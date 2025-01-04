@@ -18,13 +18,13 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { Data } from "@/types/data";
-import Header from "@/components/layout/header";
- 
+import Header from "@/app/components/Header";
+
 export const Dashboard = (props: { data: Data[] }) => {
   const { data } = props;
   return (
     <div className="container mx-auto p-4">
-        <Header/>
+      <Header />
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <CardHeader>
@@ -61,4 +61,4 @@ export const Dashboard = (props: { data: Data[] }) => {
       </div>
     </div>
   );
-}
+};
